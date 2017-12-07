@@ -1,0 +1,21 @@
+<h1>Eat a burger?</h1>
+
+<h3>(Or make a new one below...)</h3>
+
+<ul>
+  {{#each burgers}}
+  	<li>
+  	   <p>Type of Burger: {{this.burger_name}}</p>
+       <p>Devoured?: {{this.devoured}}</p>
+       <p>When?: {{this.date_eaten}}</p>
+  	</li>
+  {{/each}}
+</ul>
+
+<div>
+  <form action="/" method="POST">
+  	<textarea type="text" name="burger">burger name...</textarea>
+
+  	<button type="submit">Create your Burger!</button>
+  </form>
+</div>
