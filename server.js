@@ -24,3 +24,6 @@ app.use("/", routes);
 app.listen(port, function(){
 console.log("link - http://localhost:" + port);
 })
+
+
+// i am missing some javascript for functionality.
