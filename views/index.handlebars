@@ -1,21 +1,52 @@
-<h1>Eat a burger?</h1>
+<!-- put this info into the index.handlebars file -->
 
-<h3>(Or make a new one below...)</h3>
 
-<ul>
-  {{#each burgers}}
-  	<li>
-  	   <p>Type of Burger: {{this.burger_name}}</p>
-       <p>Devoured?: {{this.devoured}}</p>
-       <p>When?: {{this.date_eaten}}</p>
-  	</li>
-  {{/each}}
-</ul>
+<container id="main">
+  <div class="row" id="burger-image">
+    <br>
+    <div class="col-lg-4"></div>
 
-<div>
-  <form action="/" method="POST">
-  	<textarea type="text" name="burger">burger name...</textarea>
+    <div class="col-lg-4 center">
+      <h1 class="text-center">
+        "Eat a Burger!"
+      </h1>
+      <br>
+      <img src="../public/assets/images/burgerpic.png" alt="burger image">
+      <br>
+      <h3>(Or make a new one below...)</h3>
+    </div>
+    <div class="col-lg-4"></div>
+  </div>
+  </div>
 
-  	<button type="submit">Create your Burger!</button>
-  </form>
-</div>
+  <container id="burger-control">
+    <div class="row">
+      <div class="col-lg-3"></div>
+      <div class="col-lg-3">
+        <h3>Burgers to Eat.</h3>
+        <ul>
+          {{#each burgers}}
+          <li>
+            <p>Type of Burger: {{this.burger_name}}</p>
+            <p>Devoured?: {{this.devoured}}</p>
+            <p>When?: {{this.date_eaten}}</p>
+          </li>
+          {{/each}}
+        </ul>
+        <br>
+        <div>
+          <form action="/" method="POST">
+            <textarea type="text" name="burger">burger name...</textarea>
+
+            <button type="submit">Create your Burger!</button>
+          </form>
+        </div>
+      </div>
+      <div class="col-lg-3">
+        <h3>Eaten Burgers Go Here.</h3>
+
+      </div>
+      <div class="col-lg-3"></div>
+    </div>
+  </container>
+</container>
